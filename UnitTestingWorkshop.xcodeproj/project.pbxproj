@@ -8,11 +8,12 @@
 
 /* Begin PBXBuildFile section */
 		F57D85B021394641007FEE90 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F57D85AF21394641007FEE90 /* AppDelegate.swift */; };
-		F57D85B221394641007FEE90 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F57D85B121394641007FEE90 /* ViewController.swift */; };
+		F57D85B221394641007FEE90 /* TicketsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F57D85B121394641007FEE90 /* TicketsViewController.swift */; };
 		F57D85B521394641007FEE90 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F57D85B321394641007FEE90 /* Main.storyboard */; };
 		F57D85B721394642007FEE90 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F57D85B621394642007FEE90 /* Assets.xcassets */; };
 		F57D85BA21394642007FEE90 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F57D85B821394642007FEE90 /* LaunchScreen.storyboard */; };
-		F57D85C521394642007FEE90 /* UnitTestingWorkshopTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F57D85C421394642007FEE90 /* UnitTestingWorkshopTests.swift */; };
+		F57D85C521394642007FEE90 /* TicketsControllerViewDataTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F57D85C421394642007FEE90 /* TicketsControllerViewDataTests.swift */; };
+		F57D85D021395EDB007FEE90 /* TicketsViewControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F57D85CF21395EDB007FEE90 /* TicketsViewControllerTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -28,14 +29,15 @@
 /* Begin PBXFileReference section */
 		F57D85AC21394641007FEE90 /* UnitTestingWorkshop.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = UnitTestingWorkshop.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F57D85AF21394641007FEE90 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		F57D85B121394641007FEE90 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		F57D85B121394641007FEE90 /* TicketsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TicketsViewController.swift; sourceTree = "<group>"; };
 		F57D85B421394641007FEE90 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		F57D85B621394642007FEE90 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		F57D85B921394642007FEE90 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		F57D85BB21394642007FEE90 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F57D85C021394642007FEE90 /* UnitTestingWorkshopTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = UnitTestingWorkshopTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		F57D85C421394642007FEE90 /* UnitTestingWorkshopTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UnitTestingWorkshopTests.swift; sourceTree = "<group>"; };
+		F57D85C421394642007FEE90 /* TicketsControllerViewDataTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TicketsControllerViewDataTests.swift; sourceTree = "<group>"; };
 		F57D85C621394642007FEE90 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F57D85CF21395EDB007FEE90 /* TicketsViewControllerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TicketsViewControllerTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -78,7 +80,7 @@
 			isa = PBXGroup;
 			children = (
 				F57D85AF21394641007FEE90 /* AppDelegate.swift */,
-				F57D85B121394641007FEE90 /* ViewController.swift */,
+				F57D85B121394641007FEE90 /* TicketsViewController.swift */,
 				F57D85B321394641007FEE90 /* Main.storyboard */,
 				F57D85B621394642007FEE90 /* Assets.xcassets */,
 				F57D85B821394642007FEE90 /* LaunchScreen.storyboard */,
@@ -90,7 +92,8 @@
 		F57D85C321394642007FEE90 /* UnitTestingWorkshopTests */ = {
 			isa = PBXGroup;
 			children = (
-				F57D85C421394642007FEE90 /* UnitTestingWorkshopTests.swift */,
+				F57D85C421394642007FEE90 /* TicketsControllerViewDataTests.swift */,
+				F57D85CF21395EDB007FEE90 /* TicketsViewControllerTests.swift */,
 				F57D85C621394642007FEE90 /* Info.plist */,
 			);
 			path = UnitTestingWorkshopTests;
@@ -197,7 +200,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F57D85B221394641007FEE90 /* ViewController.swift in Sources */,
+				F57D85B221394641007FEE90 /* TicketsViewController.swift in Sources */,
 				F57D85B021394641007FEE90 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -206,7 +209,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F57D85C521394642007FEE90 /* UnitTestingWorkshopTests.swift in Sources */,
+				F57D85D021395EDB007FEE90 /* TicketsViewControllerTests.swift in Sources */,
+				F57D85C521394642007FEE90 /* TicketsControllerViewDataTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

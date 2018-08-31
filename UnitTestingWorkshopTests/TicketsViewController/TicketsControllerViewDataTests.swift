@@ -3,7 +3,7 @@ import XCTest
 
 class TicketsControllerViewDataTests: XCTestCase {
     func testDataModelIsCorrect() {
-        let tickets = self.tickets(quantity: 3)
+        let tickets = self.getTickets(quantity: 3)
 
         let sut = TicketsViewController.ViewData(ticketCollection: tickets)
 
@@ -12,7 +12,7 @@ class TicketsControllerViewDataTests: XCTestCase {
         XCTAssertEqual(sut.ticketQRs[2], "2")
     }
 
-    func tickets(quantity: Int) -> [Ticket] {
+    func getTickets(quantity: Int) -> [Ticket] {
         return (0..<quantity).map { return Ticket(identifier: String($0)) }
     }
 }

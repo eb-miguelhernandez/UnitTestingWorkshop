@@ -9,6 +9,10 @@
 /* Begin PBXBuildFile section */
 		F554F166213D15EB00E49D34 /* DateFormatters.swift in Sources */ = {isa = PBXBuildFile; fileRef = F554F165213D15EB00E49D34 /* DateFormatters.swift */; };
 		F554F168213D160800E49D34 /* DateFormattersTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F554F167213D160800E49D34 /* DateFormattersTests.swift */; };
+		F554F16E213D527B00E49D34 /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = F554F16D213D527B00E49D34 /* Coordinator.swift */; };
+		F554F171213D52B700E49D34 /* CoordinatorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F554F170213D52B700E49D34 /* CoordinatorTests.swift */; };
+		F554F174213D53AD00E49D34 /* Epic.swift in Sources */ = {isa = PBXBuildFile; fileRef = F554F173213D53AD00E49D34 /* Epic.swift */; };
+		F554F176213D593100E49D34 /* EpicTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F554F175213D593100E49D34 /* EpicTests.swift */; };
 		F57D85B021394641007FEE90 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F57D85AF21394641007FEE90 /* AppDelegate.swift */; };
 		F57D85B221394641007FEE90 /* TicketsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F57D85B121394641007FEE90 /* TicketsViewController.swift */; };
 		F57D85B721394642007FEE90 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F57D85B621394642007FEE90 /* Assets.xcassets */; };
@@ -31,6 +35,10 @@
 /* Begin PBXFileReference section */
 		F554F165213D15EB00E49D34 /* DateFormatters.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateFormatters.swift; sourceTree = "<group>"; };
 		F554F167213D160800E49D34 /* DateFormattersTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateFormattersTests.swift; sourceTree = "<group>"; };
+		F554F16D213D527B00E49D34 /* Coordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coordinator.swift; sourceTree = "<group>"; };
+		F554F170213D52B700E49D34 /* CoordinatorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoordinatorTests.swift; sourceTree = "<group>"; };
+		F554F173213D53AD00E49D34 /* Epic.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Epic.swift; sourceTree = "<group>"; };
+		F554F175213D593100E49D34 /* EpicTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EpicTests.swift; sourceTree = "<group>"; };
 		F57D85AC21394641007FEE90 /* UnitTestingWorkshop.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = UnitTestingWorkshop.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F57D85AF21394641007FEE90 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F57D85B121394641007FEE90 /* TicketsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TicketsViewController.swift; sourceTree = "<group>"; };
@@ -78,6 +86,49 @@
 			path = Utils;
 			sourceTree = "<group>";
 		};
+		F554F16B213D525100E49D34 /* Assets */ = {
+			isa = PBXGroup;
+			children = (
+				F57D85B621394642007FEE90 /* Assets.xcassets */,
+				F57D85B821394642007FEE90 /* LaunchScreen.storyboard */,
+			);
+			path = Assets;
+			sourceTree = "<group>";
+		};
+		F554F16C213D526700E49D34 /* Coordinators */ = {
+			isa = PBXGroup;
+			children = (
+				F554F172213D53A000E49D34 /* Epic */,
+				F554F16D213D527B00E49D34 /* Coordinator.swift */,
+			);
+			path = Coordinators;
+			sourceTree = "<group>";
+		};
+		F554F16F213D52A700E49D34 /* Coordinators */ = {
+			isa = PBXGroup;
+			children = (
+				F554F170213D52B700E49D34 /* CoordinatorTests.swift */,
+				F554F177213D595100E49D34 /* Epic */,
+			);
+			path = Coordinators;
+			sourceTree = "<group>";
+		};
+		F554F172213D53A000E49D34 /* Epic */ = {
+			isa = PBXGroup;
+			children = (
+				F554F173213D53AD00E49D34 /* Epic.swift */,
+			);
+			path = Epic;
+			sourceTree = "<group>";
+		};
+		F554F177213D595100E49D34 /* Epic */ = {
+			isa = PBXGroup;
+			children = (
+				F554F175213D593100E49D34 /* EpicTests.swift */,
+			);
+			path = Epic;
+			sourceTree = "<group>";
+		};
 		F57D85A321394641007FEE90 = {
 			isa = PBXGroup;
 			children = (
@@ -100,10 +151,10 @@
 			isa = PBXGroup;
 			children = (
 				F57D85AF21394641007FEE90 /* AppDelegate.swift */,
-				F554F164213D15DF00E49D34 /* Utils */,
+				F554F16C213D526700E49D34 /* Coordinators */,
 				F57D85D421397417007FEE90 /* TicketsViewController */,
-				F57D85B621394642007FEE90 /* Assets.xcassets */,
-				F57D85B821394642007FEE90 /* LaunchScreen.storyboard */,
+				F554F164213D15DF00E49D34 /* Utils */,
+				F554F16B213D525100E49D34 /* Assets */,
 				F57D85BB21394642007FEE90 /* Info.plist */,
 			);
 			path = UnitTestingWorkshop;
@@ -112,6 +163,7 @@
 		F57D85C321394642007FEE90 /* UnitTestingWorkshopTests */ = {
 			isa = PBXGroup;
 			children = (
+				F554F16F213D52A700E49D34 /* Coordinators */,
 				F57D85D321397405007FEE90 /* TicketsViewController */,
 				F554F161213D155200E49D34 /* Utils */,
 				F57D85C621394642007FEE90 /* Info.plist */,
@@ -238,6 +290,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F554F16E213D527B00E49D34 /* Coordinator.swift in Sources */,
+				F554F174213D53AD00E49D34 /* Epic.swift in Sources */,
 				F554F166213D15EB00E49D34 /* DateFormatters.swift in Sources */,
 				F57D85B221394641007FEE90 /* TicketsViewController.swift in Sources */,
 				F57D85B021394641007FEE90 /* AppDelegate.swift in Sources */,
@@ -248,7 +302,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F554F171213D52B700E49D34 /* CoordinatorTests.swift in Sources */,
 				F57D85D021395EDB007FEE90 /* TicketsViewControllerTests.swift in Sources */,
+				F554F176213D593100E49D34 /* EpicTests.swift in Sources */,
 				F57D85C521394642007FEE90 /* TicketsControllerViewDataTests.swift in Sources */,
 				F554F168213D160800E49D34 /* DateFormattersTests.swift in Sources */,
 			);

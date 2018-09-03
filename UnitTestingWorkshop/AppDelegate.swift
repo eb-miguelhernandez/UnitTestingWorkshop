@@ -1,11 +1,3 @@
-//
-//  AppDelegate.swift
-//  UnitTestingWorkshop
-//
-//  Created by Miguel Hernández Jaso on 31/08/2018.
-//  Copyright © 2018 Eventbrite. All rights reserved.
-//
-
 import UIKit
 
 @UIApplicationMain

@@ -27,10 +27,14 @@ class TicketsViewController: UIViewController {
 class TicketsViewControllerTableViewDatasource: NSObject, UITableViewDataSource {
     var items = [String]()
     let date: Date
+    let timeZone: TimeZone
+    private var dateFormatter: DateFormatter
 
-    init(items: [String], date: Date = Date()) {
+    init(items: [String], date: Date = Date(), timeZone: TimeZone = TimeZone.current, dateDisplay: DateDisplay = DateDisplay.shortDate) {
         self.items = items
         self.date = date
+        self.timeZone = timeZone
+        self.dateFormatter = dateDisplay.formatter(forTimeZone: self.timeZone)
     }
 
     func numberOfSections(in tableView: UITableView) -> Int {
@@ -44,24 +48,13 @@ class TicketsViewControllerTableViewDatasource: NSObject, UITableViewDataSource 
         cell.textLabel?.text = self.items[indexPath.row]
         return cell
     }
-    public static func getDateFormatter(timeZone: TimeZone?) -> DateFormatter {
-        let dateFormatter = DateFormatter()
-        dateFormatter.dateFormat = "dd-MM-yy"
-        dateFormatter.timeZone = timeZone
-        return dateFormatter
-    }
-    func dateTextForTickets(date: Date, dateFormatter: DateFormatter, timeZone: TimeZone) -> String {
-        return dateFormatter.string(from: date)
-    }
     func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
-        let timeZone = TimeZone.current
-        let dateFormatter = TicketsViewControllerTableViewDatasource.getDateFormatter(timeZone: timeZone)
-        return self.dateTextForTickets(date: self.date, dateFormatter: dateFormatter, timeZone: timeZone)
+        return DateDisplay.text(date: self.date, dateFormatter: self.dateFormatter, timeZone: self.timeZone)
     }
 }
 
 extension TicketsViewController.ViewData {
-    init(ticketCollection: [Ticket], title: String = "Tickets") {
+    init(ticketCollection: [Ticket], title: String =  NSLocalizedString("Tickets", comment: "Title for Tickets Screen")) {
         self.title = title
         self.ticketQRs = ticketCollection.map { $0.identifier }
     }

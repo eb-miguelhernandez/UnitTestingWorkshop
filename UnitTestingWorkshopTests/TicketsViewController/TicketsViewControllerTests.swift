@@ -32,18 +32,21 @@ class TicketsViewControllerTests: TicketsViewControllerTest {
 
 class TicketsViewControllerTableViewTests: TicketsViewControllerTest {
     var sut: UITableView!
+    var date: Date!
     override func setUp() {
         super.setUp()
         self.sut = UITableView()
+        self.date = Date(timeIntervalSince1970: 1535698362)
     }
     override func tearDown() {
         self.sut = nil
+        self.date = nil
         super.tearDown()
     }
 
     func testTicketsVCTableViewDisplays4Items() {
         let viewData = getViewData(numberOfTickets: 4)
-        let ticketsDatasource = TicketsViewControllerTableViewDatasource(items: viewData.ticketQRs)
+        let ticketsDatasource = TicketsViewControllerTableViewDatasource(items: viewData.ticketQRs, date: self.date)
 
         XCTAssertEqual(ticketsDatasource.numberOfSections(in: self.sut), 1)
         XCTAssertEqual(ticketsDatasource.tableView(self.sut, numberOfRowsInSection: 0), 4)
@@ -51,9 +54,26 @@ class TicketsViewControllerTableViewTests: TicketsViewControllerTest {
 
     func testTicketsVCTableViewDisplaysTheProperQROnCell() {
         let viewData = getViewData(numberOfTickets: 1)
-        let ticketsDatasource = TicketsViewControllerTableViewDatasource(items: viewData.ticketQRs)
+        let ticketsDatasource = TicketsViewControllerTableViewDatasource(items: viewData.ticketQRs, date: self.date)
 
         let cell = ticketsDatasource.tableView(self.sut, cellForRowAt: IndexPath(item: 0, section: 0))
         XCTAssertEqual(cell.textLabel?.text, viewData.ticketQRs[0])
+    }
+
+    func testTicketsVCTableViewDisplaysDateForAugust2018InShortFormatOnFirstSection() {
+        let viewData = getViewData(numberOfTickets: 100)
+        let ticketsDatasource = TicketsViewControllerTableViewDatasource(items: viewData.ticketQRs, date: self.date)
+
+        let sectionText = ticketsDatasource.tableView(self.sut, titleForHeaderInSection: 0)
+        XCTAssertEqual(sectionText, "31-08-18")
+    }
+
+    func testTicketsVCTableViewDisplaysDateForJanuary2025InShortFormatOnFirstSection() {
+        let viewData = getViewData(numberOfTickets: 100)
+        self.date = Date(timeIntervalSince1970: 1735714362)
+        let ticketsDatasource = TicketsViewControllerTableViewDatasource(items: viewData.ticketQRs, date: self.date)
+
+        let sectionText = ticketsDatasource.tableView(self.sut, titleForHeaderInSection: 0)
+        XCTAssertEqual(sectionText, "01-01-25")
     }
 }

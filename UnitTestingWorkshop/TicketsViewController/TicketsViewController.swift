@@ -26,9 +26,11 @@ class TicketsViewController: UIViewController {
 
 class TicketsViewControllerTableViewDatasource: NSObject, UITableViewDataSource {
     var items = [String]()
+    let date: Date
 
-    init(items: [String]) {
+    init(items: [String], date: Date = Date()) {
         self.items = items
+        self.date = date
     }
 
     func numberOfSections(in tableView: UITableView) -> Int {
@@ -41,6 +43,20 @@ class TicketsViewControllerTableViewDatasource: NSObject, UITableViewDataSource 
         let cell = UITableViewCell(frame: CGRect.zero)
         cell.textLabel?.text = self.items[indexPath.row]
         return cell
+    }
+    public static func getDateFormatter(timeZone: TimeZone?) -> DateFormatter {
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateFormat = "dd-MM-yy"
+        dateFormatter.timeZone = timeZone
+        return dateFormatter
+    }
+    func dateTextForTickets(date: Date, dateFormatter: DateFormatter, timeZone: TimeZone) -> String {
+        return dateFormatter.string(from: date)
+    }
+    func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
+        let timeZone = TimeZone.current
+        let dateFormatter = TicketsViewControllerTableViewDatasource.getDateFormatter(timeZone: timeZone)
+        return self.dateTextForTickets(date: self.date, dateFormatter: dateFormatter, timeZone: timeZone)
     }
 }
 

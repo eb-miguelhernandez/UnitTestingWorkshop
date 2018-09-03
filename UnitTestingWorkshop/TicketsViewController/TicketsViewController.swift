@@ -2,7 +2,7 @@ import UIKit
 
 class TicketsViewController: UIViewController {
     @IBOutlet weak var ticketsTableView: UITableView!
-    private var ticketsViewControllerTableViewDatasource: TicketsViewControllerTableViewDatasource!
+    var ticketsViewControllerTableViewDatasource: TicketsViewControllerTableViewDataSource!
 
     struct ViewData {
         let title: String
@@ -18,19 +18,19 @@ class TicketsViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         if let tickets = viewData?.ticketQRs {
-            let tableViewDatasource = TicketsViewControllerTableViewDatasource(items: tickets)
-            self.ticketsTableView.dataSource = tableViewDatasource
+            self.ticketsViewControllerTableViewDatasource = TicketsViewControllerTableViewDataSource(items: tickets)
+            self.ticketsTableView.dataSource = self.ticketsViewControllerTableViewDatasource
         }
     }
 }
 
-class TicketsViewControllerTableViewDatasource: NSObject, UITableViewDataSource {
+class TicketsViewControllerTableViewDataSource: NSObject, UITableViewDataSource {
     var items = [String]()
     let date: Date
     let timeZone: TimeZone
     private var dateFormatter: DateFormatter
 
-    init(items: [String], date: Date = Date(), timeZone: TimeZone = TimeZone.current, dateDisplay: DateDisplay = DateDisplay.shortDate) {
+    init(items: [String], date: Date = Date(), timeZone: TimeZone = TimeZone.current, dateDisplay: DateDisplay = DateDisplay.fullDate) {
         self.items = items
         self.date = date
         self.timeZone = timeZone

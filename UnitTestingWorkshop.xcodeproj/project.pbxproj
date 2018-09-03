@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		F554F166213D15EB00E49D34 /* DateFormatters.swift in Sources */ = {isa = PBXBuildFile; fileRef = F554F165213D15EB00E49D34 /* DateFormatters.swift */; };
+		F554F168213D160800E49D34 /* DateFormattersTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F554F167213D160800E49D34 /* DateFormattersTests.swift */; };
 		F57D85B021394641007FEE90 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F57D85AF21394641007FEE90 /* AppDelegate.swift */; };
 		F57D85B221394641007FEE90 /* TicketsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F57D85B121394641007FEE90 /* TicketsViewController.swift */; };
 		F57D85B721394642007FEE90 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F57D85B621394642007FEE90 /* Assets.xcassets */; };
@@ -27,6 +29,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		F554F165213D15EB00E49D34 /* DateFormatters.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateFormatters.swift; sourceTree = "<group>"; };
+		F554F167213D160800E49D34 /* DateFormattersTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateFormattersTests.swift; sourceTree = "<group>"; };
 		F57D85AC21394641007FEE90 /* UnitTestingWorkshop.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = UnitTestingWorkshop.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F57D85AF21394641007FEE90 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F57D85B121394641007FEE90 /* TicketsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TicketsViewController.swift; sourceTree = "<group>"; };
@@ -58,6 +62,22 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		F554F161213D155200E49D34 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				F554F167213D160800E49D34 /* DateFormattersTests.swift */,
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
+		F554F164213D15DF00E49D34 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				F554F165213D15EB00E49D34 /* DateFormatters.swift */,
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
 		F57D85A321394641007FEE90 = {
 			isa = PBXGroup;
 			children = (
@@ -80,6 +100,7 @@
 			isa = PBXGroup;
 			children = (
 				F57D85AF21394641007FEE90 /* AppDelegate.swift */,
+				F554F164213D15DF00E49D34 /* Utils */,
 				F57D85D421397417007FEE90 /* TicketsViewController */,
 				F57D85B621394642007FEE90 /* Assets.xcassets */,
 				F57D85B821394642007FEE90 /* LaunchScreen.storyboard */,
@@ -92,6 +113,7 @@
 			isa = PBXGroup;
 			children = (
 				F57D85D321397405007FEE90 /* TicketsViewController */,
+				F554F161213D155200E49D34 /* Utils */,
 				F57D85C621394642007FEE90 /* Info.plist */,
 			);
 			path = UnitTestingWorkshopTests;
@@ -216,6 +238,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F554F166213D15EB00E49D34 /* DateFormatters.swift in Sources */,
 				F57D85B221394641007FEE90 /* TicketsViewController.swift in Sources */,
 				F57D85B021394641007FEE90 /* AppDelegate.swift in Sources */,
 			);
@@ -227,6 +250,7 @@
 			files = (
 				F57D85D021395EDB007FEE90 /* TicketsViewControllerTests.swift in Sources */,
 				F57D85C521394642007FEE90 /* TicketsControllerViewDataTests.swift in Sources */,
+				F554F168213D160800E49D34 /* DateFormattersTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -30,4 +30,3 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         return TicketsViewController.ViewData(ticketCollection: getTickets(quantity: 40))
     }
 }
-

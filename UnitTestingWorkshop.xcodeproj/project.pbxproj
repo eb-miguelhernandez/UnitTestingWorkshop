@@ -9,10 +9,17 @@
 /* Begin PBXBuildFile section */
 		F554F166213D15EB00E49D34 /* DateFormatters.swift in Sources */ = {isa = PBXBuildFile; fileRef = F554F165213D15EB00E49D34 /* DateFormatters.swift */; };
 		F554F168213D160800E49D34 /* DateFormattersTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F554F167213D160800E49D34 /* DateFormattersTests.swift */; };
-		F554F16E213D527B00E49D34 /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = F554F16D213D527B00E49D34 /* Coordinator.swift */; };
+		F554F16E213D527B00E49D34 /* AppCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = F554F16D213D527B00E49D34 /* AppCoordinator.swift */; };
 		F554F171213D52B700E49D34 /* CoordinatorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F554F170213D52B700E49D34 /* CoordinatorTests.swift */; };
-		F554F174213D53AD00E49D34 /* Epic.swift in Sources */ = {isa = PBXBuildFile; fileRef = F554F173213D53AD00E49D34 /* Epic.swift */; };
-		F554F176213D593100E49D34 /* EpicTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F554F175213D593100E49D34 /* EpicTests.swift */; };
+		F554F186213D7F3300E49D34 /* Epic.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F554F17D213D7F3200E49D34 /* Epic.framework */; };
+		F554F18F213D7F3300E49D34 /* Epic.h in Headers */ = {isa = PBXBuildFile; fileRef = F554F17F213D7F3200E49D34 /* Epic.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		F554F192213D7F3300E49D34 /* Epic.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F554F17D213D7F3200E49D34 /* Epic.framework */; };
+		F554F193213D7F3300E49D34 /* Epic.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = F554F17D213D7F3200E49D34 /* Epic.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		F554F19B213D7F5300E49D34 /* EpicTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F554F175213D593100E49D34 /* EpicTests.swift */; };
+		F554F19C213D7F5D00E49D34 /* Epic.swift in Sources */ = {isa = PBXBuildFile; fileRef = F554F173213D53AD00E49D34 /* Epic.swift */; };
+		F554F19E213E777800E49D34 /* Actions.swift in Sources */ = {isa = PBXBuildFile; fileRef = F554F19D213E777800E49D34 /* Actions.swift */; };
+		F554F1A1213E77D300E49D34 /* ActionType.swift in Sources */ = {isa = PBXBuildFile; fileRef = F554F1A0213E77D300E49D34 /* ActionType.swift */; };
+		F554F1A4213E7F6A00E49D34 /* TicketService.swift in Sources */ = {isa = PBXBuildFile; fileRef = F554F1A3213E7F6A00E49D34 /* TicketService.swift */; };
 		F57D85B021394641007FEE90 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F57D85AF21394641007FEE90 /* AppDelegate.swift */; };
 		F57D85B221394641007FEE90 /* TicketsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F57D85B121394641007FEE90 /* TicketsViewController.swift */; };
 		F57D85B721394642007FEE90 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F57D85B621394642007FEE90 /* Assets.xcassets */; };
@@ -23,6 +30,27 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
+		F554F187213D7F3300E49D34 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = F57D85A421394641007FEE90 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = F554F17C213D7F3200E49D34;
+			remoteInfo = Epic;
+		};
+		F554F189213D7F3300E49D34 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = F57D85A421394641007FEE90 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = F57D85AB21394641007FEE90;
+			remoteInfo = UnitTestingWorkshop;
+		};
+		F554F190213D7F3300E49D34 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = F57D85A421394641007FEE90 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = F554F17C213D7F3200E49D34;
+			remoteInfo = Epic;
+		};
 		F57D85C121394642007FEE90 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = F57D85A421394641007FEE90 /* Project object */;
@@ -32,13 +60,35 @@
 		};
 /* End PBXContainerItemProxy section */
 
+/* Begin PBXCopyFilesBuildPhase section */
+		F554F197213D7F3300E49D34 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				F554F193213D7F3300E49D34 /* Epic.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
 		F554F165213D15EB00E49D34 /* DateFormatters.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateFormatters.swift; sourceTree = "<group>"; };
 		F554F167213D160800E49D34 /* DateFormattersTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateFormattersTests.swift; sourceTree = "<group>"; };
-		F554F16D213D527B00E49D34 /* Coordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coordinator.swift; sourceTree = "<group>"; };
+		F554F16D213D527B00E49D34 /* AppCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppCoordinator.swift; sourceTree = "<group>"; };
 		F554F170213D52B700E49D34 /* CoordinatorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoordinatorTests.swift; sourceTree = "<group>"; };
 		F554F173213D53AD00E49D34 /* Epic.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Epic.swift; sourceTree = "<group>"; };
 		F554F175213D593100E49D34 /* EpicTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EpicTests.swift; sourceTree = "<group>"; };
+		F554F17D213D7F3200E49D34 /* Epic.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Epic.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		F554F17F213D7F3200E49D34 /* Epic.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Epic.h; sourceTree = "<group>"; };
+		F554F180213D7F3300E49D34 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F554F185213D7F3300E49D34 /* EpicTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = EpicTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		F554F18E213D7F3300E49D34 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F554F19D213E777800E49D34 /* Actions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Actions.swift; sourceTree = "<group>"; };
+		F554F1A0213E77D300E49D34 /* ActionType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActionType.swift; sourceTree = "<group>"; };
+		F554F1A3213E7F6A00E49D34 /* TicketService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TicketService.swift; sourceTree = "<group>"; };
 		F57D85AC21394641007FEE90 /* UnitTestingWorkshop.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = UnitTestingWorkshop.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F57D85AF21394641007FEE90 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F57D85B121394641007FEE90 /* TicketsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TicketsViewController.swift; sourceTree = "<group>"; };
@@ -53,10 +103,26 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		F554F179213D7F3200E49D34 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F554F182213D7F3300E49D34 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F554F186213D7F3300E49D34 /* Epic.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		F57D85A921394641007FEE90 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F554F192213D7F3300E49D34 /* Epic.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -98,8 +164,8 @@
 		F554F16C213D526700E49D34 /* Coordinators */ = {
 			isa = PBXGroup;
 			children = (
-				F554F172213D53A000E49D34 /* Epic */,
-				F554F16D213D527B00E49D34 /* Coordinator.swift */,
+				F554F16D213D527B00E49D34 /* AppCoordinator.swift */,
+				F554F19F213E77C600E49D34 /* Actions */,
 			);
 			path = Coordinators;
 			sourceTree = "<group>";
@@ -108,7 +174,6 @@
 			isa = PBXGroup;
 			children = (
 				F554F170213D52B700E49D34 /* CoordinatorTests.swift */,
-				F554F177213D595100E49D34 /* Epic */,
 			);
 			path = Coordinators;
 			sourceTree = "<group>";
@@ -129,11 +194,49 @@
 			path = Epic;
 			sourceTree = "<group>";
 		};
+		F554F17E213D7F3200E49D34 /* Epic */ = {
+			isa = PBXGroup;
+			children = (
+				F554F172213D53A000E49D34 /* Epic */,
+				F554F17F213D7F3200E49D34 /* Epic.h */,
+				F554F180213D7F3300E49D34 /* Info.plist */,
+			);
+			path = Epic;
+			sourceTree = "<group>";
+		};
+		F554F18B213D7F3300E49D34 /* EpicTests */ = {
+			isa = PBXGroup;
+			children = (
+				F554F177213D595100E49D34 /* Epic */,
+				F554F18E213D7F3300E49D34 /* Info.plist */,
+			);
+			path = EpicTests;
+			sourceTree = "<group>";
+		};
+		F554F19F213E77C600E49D34 /* Actions */ = {
+			isa = PBXGroup;
+			children = (
+				F554F19D213E777800E49D34 /* Actions.swift */,
+				F554F1A0213E77D300E49D34 /* ActionType.swift */,
+			);
+			path = Actions;
+			sourceTree = "<group>";
+		};
+		F554F1A2213E7F5400E49D34 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				F554F1A3213E7F6A00E49D34 /* TicketService.swift */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
 		F57D85A321394641007FEE90 = {
 			isa = PBXGroup;
 			children = (
 				F57D85AE21394641007FEE90 /* UnitTestingWorkshop */,
 				F57D85C321394642007FEE90 /* UnitTestingWorkshopTests */,
+				F554F17E213D7F3200E49D34 /* Epic */,
+				F554F18B213D7F3300E49D34 /* EpicTests */,
 				F57D85AD21394641007FEE90 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -143,6 +246,8 @@
 			children = (
 				F57D85AC21394641007FEE90 /* UnitTestingWorkshop.app */,
 				F57D85C021394642007FEE90 /* UnitTestingWorkshopTests.xctest */,
+				F554F17D213D7F3200E49D34 /* Epic.framework */,
+				F554F185213D7F3300E49D34 /* EpicTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -151,6 +256,7 @@
 			isa = PBXGroup;
 			children = (
 				F57D85AF21394641007FEE90 /* AppDelegate.swift */,
+				F554F1A2213E7F5400E49D34 /* Services */,
 				F554F16C213D526700E49D34 /* Coordinators */,
 				F57D85D421397417007FEE90 /* TicketsViewController */,
 				F554F164213D15DF00E49D34 /* Utils */,
@@ -191,7 +297,55 @@
 		};
 /* End PBXGroup section */
 
+/* Begin PBXHeadersBuildPhase section */
+		F554F17A213D7F3200E49D34 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F554F18F213D7F3300E49D34 /* Epic.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
 /* Begin PBXNativeTarget section */
+		F554F17C213D7F3200E49D34 /* Epic */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F554F194213D7F3300E49D34 /* Build configuration list for PBXNativeTarget "Epic" */;
+			buildPhases = (
+				F554F178213D7F3200E49D34 /* Sources */,
+				F554F179213D7F3200E49D34 /* Frameworks */,
+				F554F17A213D7F3200E49D34 /* Headers */,
+				F554F17B213D7F3200E49D34 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Epic;
+			productName = Epic;
+			productReference = F554F17D213D7F3200E49D34 /* Epic.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		F554F184213D7F3300E49D34 /* EpicTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F554F198213D7F3300E49D34 /* Build configuration list for PBXNativeTarget "EpicTests" */;
+			buildPhases = (
+				F554F181213D7F3300E49D34 /* Sources */,
+				F554F182213D7F3300E49D34 /* Frameworks */,
+				F554F183213D7F3300E49D34 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				F554F188213D7F3300E49D34 /* PBXTargetDependency */,
+				F554F18A213D7F3300E49D34 /* PBXTargetDependency */,
+			);
+			name = EpicTests;
+			productName = EpicTests;
+			productReference = F554F185213D7F3300E49D34 /* EpicTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 		F57D85AB21394641007FEE90 /* UnitTestingWorkshop */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = F57D85C921394642007FEE90 /* Build configuration list for PBXNativeTarget "UnitTestingWorkshop" */;
@@ -199,10 +353,12 @@
 				F57D85A821394641007FEE90 /* Sources */,
 				F57D85A921394641007FEE90 /* Frameworks */,
 				F57D85AA21394641007FEE90 /* Resources */,
+				F554F197213D7F3300E49D34 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				F554F191213D7F3300E49D34 /* PBXTargetDependency */,
 			);
 			name = UnitTestingWorkshop;
 			productName = UnitTestingWorkshop;
@@ -237,6 +393,13 @@
 				LastUpgradeCheck = 0940;
 				ORGANIZATIONNAME = Eventbrite;
 				TargetAttributes = {
+					F554F17C213D7F3200E49D34 = {
+						CreatedOnToolsVersion = 9.4.1;
+					};
+					F554F184213D7F3300E49D34 = {
+						CreatedOnToolsVersion = 9.4.1;
+						TestTargetID = F57D85AB21394641007FEE90;
+					};
 					F57D85AB21394641007FEE90 = {
 						CreatedOnToolsVersion = 9.4.1;
 					};
@@ -261,11 +424,27 @@
 			targets = (
 				F57D85AB21394641007FEE90 /* UnitTestingWorkshop */,
 				F57D85BF21394642007FEE90 /* UnitTestingWorkshopTests */,
+				F554F17C213D7F3200E49D34 /* Epic */,
+				F554F184213D7F3300E49D34 /* EpicTests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		F554F17B213D7F3200E49D34 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F554F183213D7F3300E49D34 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		F57D85AA21394641007FEE90 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -286,12 +465,30 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		F554F178213D7F3200E49D34 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F554F19C213D7F5D00E49D34 /* Epic.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F554F181213D7F3300E49D34 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F554F19B213D7F5300E49D34 /* EpicTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		F57D85A821394641007FEE90 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F554F16E213D527B00E49D34 /* Coordinator.swift in Sources */,
-				F554F174213D53AD00E49D34 /* Epic.swift in Sources */,
+				F554F19E213E777800E49D34 /* Actions.swift in Sources */,
+				F554F16E213D527B00E49D34 /* AppCoordinator.swift in Sources */,
+				F554F1A4213E7F6A00E49D34 /* TicketService.swift in Sources */,
+				F554F1A1213E77D300E49D34 /* ActionType.swift in Sources */,
 				F554F166213D15EB00E49D34 /* DateFormatters.swift in Sources */,
 				F57D85B221394641007FEE90 /* TicketsViewController.swift in Sources */,
 				F57D85B021394641007FEE90 /* AppDelegate.swift in Sources */,
@@ -304,7 +501,6 @@
 			files = (
 				F554F171213D52B700E49D34 /* CoordinatorTests.swift in Sources */,
 				F57D85D021395EDB007FEE90 /* TicketsViewControllerTests.swift in Sources */,
-				F554F176213D593100E49D34 /* EpicTests.swift in Sources */,
 				F57D85C521394642007FEE90 /* TicketsControllerViewDataTests.swift in Sources */,
 				F554F168213D160800E49D34 /* DateFormattersTests.swift in Sources */,
 			);
@@ -313,6 +509,21 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
+		F554F188213D7F3300E49D34 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = F554F17C213D7F3200E49D34 /* Epic */;
+			targetProxy = F554F187213D7F3300E49D34 /* PBXContainerItemProxy */;
+		};
+		F554F18A213D7F3300E49D34 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = F57D85AB21394641007FEE90 /* UnitTestingWorkshop */;
+			targetProxy = F554F189213D7F3300E49D34 /* PBXContainerItemProxy */;
+		};
+		F554F191213D7F3300E49D34 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = F554F17C213D7F3200E49D34 /* Epic */;
+			targetProxy = F554F190213D7F3300E49D34 /* PBXContainerItemProxy */;
+		};
 		F57D85C221394642007FEE90 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = F57D85AB21394641007FEE90 /* UnitTestingWorkshop */;
@@ -332,6 +543,98 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
+		F554F195213D7F3300E49D34 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = Epic/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.eventbrite.Epic;
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		F554F196213D7F3300E49D34 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = Epic/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.eventbrite.Epic;
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		F554F199213D7F3300E49D34 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = EpicTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.eventbrite.EpicTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/UnitTestingWorkshop.app/UnitTestingWorkshop";
+			};
+			name = Debug;
+		};
+		F554F19A213D7F3300E49D34 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = EpicTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.eventbrite.EpicTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/UnitTestingWorkshop.app/UnitTestingWorkshop";
+			};
+			name = Release;
+		};
 		F57D85C721394642007FEE90 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -449,6 +752,7 @@
 		F57D85CA21394642007FEE90 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = UnitTestingWorkshop/Info.plist;
@@ -466,6 +770,7 @@
 		F57D85CB21394642007FEE90 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = UnitTestingWorkshop/Info.plist;
@@ -523,6 +828,24 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		F554F194213D7F3300E49D34 /* Build configuration list for PBXNativeTarget "Epic" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F554F195213D7F3300E49D34 /* Debug */,
+				F554F196213D7F3300E49D34 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		F554F198213D7F3300E49D34 /* Build configuration list for PBXNativeTarget "EpicTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F554F199213D7F3300E49D34 /* Debug */,
+				F554F19A213D7F3300E49D34 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		F57D85A721394641007FEE90 /* Build configuration list for PBXProject "UnitTestingWorkshop" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (

@@ -3,22 +3,15 @@ import UIKit
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
     var window: UIWindow?
+    var coordinator: AppCoordinator!
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
-        let ticketsVC = TicketsViewController()
-        ticketsVC.viewData = self.fakeData()
-
-        self.window = UIWindow(frame: UIScreen.main.bounds)
-        self.window?.rootViewController = ticketsVC
-        self.window?.makeKeyAndVisible()
+        let mainWindow = UIWindow(frame: UIScreen.main.bounds)
+        let coordinator = AppCoordinator(mainWindow: mainWindow)
+        coordinator.start()
+        self.window = mainWindow
+        self.coordinator = coordinator
 
         return true
-    }
-
-    private func fakeData() -> TicketsViewController.ViewData {
-        func getTickets(quantity: Int) -> [Ticket] {
-            return (0..<quantity).map { return Ticket(identifier: String($0)) }
-        }
-        return TicketsViewController.ViewData(ticketCollection: getTickets(quantity: 40))
     }
 }

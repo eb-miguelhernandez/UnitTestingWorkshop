@@ -24,10 +24,23 @@ class AppCoordinator: Coordinator {
 
         let initialOperations = [
             Action.fetchTickets(ticketsVC: ticketsVC, fetchDataService: TicketService.fetchTicketsData),
-            Action.openViewController(navVC: self.navVC, vc: self.currentVC!),
-            Action.openSafari(url: URL(string: "https://www.eventbrite.com")!, presenter: self.currentVC!)
+            Action.openViewController(navVC: self.navVC, vc: ticketsVC),
+            // Action.openSafari(url: URL(string: "https://www.eventbrite.com")!, presenter: self.currentVC!) // Uncomment for execution
         ]
         let epic = Epic(operations: initialOperations)
         _ = epic.run()
     }
 }
+
+/**
+ * Step by step mode
+ */
+//let initialOperations = [
+//    Action.fetchTickets(ticketsVC: ticketsVC, fetchDataService: TicketService.fetchTicketsData),
+//    Action.openViewController(navVC: self.navVC, vc: ticketsVC),
+//]
+//let epic = Epic(operations: initialOperations)
+//var iterator = epic.iterator()
+//iterator.next(executingBlock: true)
+//iterator.next(executingBlock: true)
+//iterator.next(executingBlock: true)

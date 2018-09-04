@@ -8,7 +8,8 @@ public struct Epic {
         return EpicIterator(self)
     }
 
-    /// Runs all operations. Returns the iterator.
+    /// Runs all operations and executes their blocks.
+    /// Returns the iterator.
     public func run() -> EpicIterator {
         var iterator = self.iterator()
         while iterator.finished == false {
@@ -32,11 +33,20 @@ public struct Epic {
         }
 
         /// Returns the next operation to be executed
+        @discardableResult
         public mutating func next() -> EpicOperation? {
             guard let nextItem = self[self.currentIndex] else { return nil }
 
             self.currentIndex += 1
             return nextItem
+        }
+
+        /// Returns the next operation and also executes its block automatically
+        @discardableResult
+        public mutating func next(executingBlock: Bool) -> EpicOperation? {
+            let operation = self.next()
+            if executingBlock == true, let block = operation?.block { block() }
+            return operation
         }
 
         private subscript(index: Int) -> EpicOperation? {
@@ -47,7 +57,6 @@ public struct Epic {
 }
 
 public typealias EpicBlock = () -> Void
-
 public struct EpicOperation {
     typealias EmptyBlock = (() -> Void)?
     public let identifier: String

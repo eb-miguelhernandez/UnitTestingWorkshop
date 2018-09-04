@@ -230,6 +230,14 @@
 			path = Services;
 			sourceTree = "<group>";
 		};
+		F554F1A5213E7F9500E49D34 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				F57D85D421397417007FEE90 /* TicketsViewController */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
 		F57D85A321394641007FEE90 = {
 			isa = PBXGroup;
 			children = (
@@ -256,9 +264,9 @@
 			isa = PBXGroup;
 			children = (
 				F57D85AF21394641007FEE90 /* AppDelegate.swift */,
-				F554F1A2213E7F5400E49D34 /* Services */,
 				F554F16C213D526700E49D34 /* Coordinators */,
-				F57D85D421397417007FEE90 /* TicketsViewController */,
+				F554F1A5213E7F9500E49D34 /* ViewControllers */,
+				F554F1A2213E7F5400E49D34 /* Services */,
 				F554F164213D15DF00E49D34 /* Utils */,
 				F554F16B213D525100E49D34 /* Assets */,
 				F57D85BB21394642007FEE90 /* Info.plist */,

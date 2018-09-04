@@ -9,6 +9,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         let mainWindow = UIWindow(frame: UIScreen.main.bounds)
         let coordinator = AppCoordinator(mainWindow: mainWindow)
         coordinator.start()
+
         self.window = mainWindow
         self.coordinator = coordinator
 

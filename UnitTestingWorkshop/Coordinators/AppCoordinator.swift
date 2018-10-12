@@ -25,7 +25,7 @@ class AppCoordinator: Coordinator {
         let initialOperations = [
             Action.fetchTickets(ticketsVC: ticketsVC, fetchDataService: TicketService.fetchTicketsData),
             Action.openViewController(navVC: self.navVC, vc: ticketsVC),
-            // Action.openSafari(url: URL(string: "https://www.eventbrite.com")!, presenter: self.currentVC!) // Uncomment for execution
+             Action.openSafari(url: URL(string: "https://www.eventbrite.com")!, presenter: self.currentVC!) // Uncomment for execution
         ]
         let epic = Epic(operations: initialOperations)
         _ = epic.run()

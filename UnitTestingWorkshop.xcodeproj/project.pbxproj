@@ -27,6 +27,8 @@
 		F57D85C521394642007FEE90 /* TicketsControllerViewDataTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F57D85C421394642007FEE90 /* TicketsControllerViewDataTests.swift */; };
 		F57D85D021395EDB007FEE90 /* TicketsViewControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F57D85CF21395EDB007FEE90 /* TicketsViewControllerTests.swift */; };
 		F57D85D221396B8B007FEE90 /* TicketsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = F57D85D121396B8B007FEE90 /* TicketsViewController.xib */; };
+		F5BA01EE2170D31F00BF27EA /* EpicThrottle.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5BA01ED2170D31F00BF27EA /* EpicThrottle.swift */; };
+		F5BA01F02170D43E00BF27EA /* EpicThrottleTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5BA01EF2170D43E00BF27EA /* EpicThrottleTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -100,6 +102,8 @@
 		F57D85C621394642007FEE90 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F57D85CF21395EDB007FEE90 /* TicketsViewControllerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TicketsViewControllerTests.swift; sourceTree = "<group>"; };
 		F57D85D121396B8B007FEE90 /* TicketsViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TicketsViewController.xib; sourceTree = "<group>"; };
+		F5BA01ED2170D31F00BF27EA /* EpicThrottle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EpicThrottle.swift; sourceTree = "<group>"; };
+		F5BA01EF2170D43E00BF27EA /* EpicThrottleTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EpicThrottleTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -182,6 +186,7 @@
 			isa = PBXGroup;
 			children = (
 				F554F173213D53AD00E49D34 /* Epic.swift */,
+				F5BA01ED2170D31F00BF27EA /* EpicThrottle.swift */,
 			);
 			path = Epic;
 			sourceTree = "<group>";
@@ -190,6 +195,7 @@
 			isa = PBXGroup;
 			children = (
 				F554F175213D593100E49D34 /* EpicTests.swift */,
+				F5BA01EF2170D43E00BF27EA /* EpicThrottleTests.swift */,
 			);
 			path = Epic;
 			sourceTree = "<group>";
@@ -406,7 +412,6 @@
 					};
 					F554F184213D7F3300E49D34 = {
 						CreatedOnToolsVersion = 9.4.1;
-						TestTargetID = F57D85AB21394641007FEE90;
 					};
 					F57D85AB21394641007FEE90 = {
 						CreatedOnToolsVersion = 9.4.1;
@@ -477,6 +482,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F5BA01EE2170D31F00BF27EA /* EpicThrottle.swift in Sources */,
 				F554F19C213D7F5D00E49D34 /* Epic.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -485,6 +491,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F5BA01F02170D43E00BF27EA /* EpicThrottleTests.swift in Sources */,
 				F554F19B213D7F5300E49D34 /* EpicTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -620,7 +627,6 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/UnitTestingWorkshop.app/UnitTestingWorkshop";
 			};
 			name = Debug;
 		};
@@ -639,7 +645,6 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/UnitTestingWorkshop.app/UnitTestingWorkshop";
 			};
 			name = Release;
 		};
